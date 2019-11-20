@@ -34,46 +34,106 @@
             to{background-color: yellow;  top: 200px;}
         } */
         
-	    .ThunderCloud{
-            fill:#B3B3B4; 
-            /* animation-fill-mode: forwards; */
-            }
+	    
+        
         div{
             width: 200px;
             height: 200px;  
         }
-        .Thunder{
-            fill:#EAAD4C;
+        .frontCloud{
+            fill:#79736E;
             position: relative;
-            animation-name: example;
+            animation-name: frontCloudAnimation;
             animation-delay: 2s;
             animation-duration: 4s;
             animation-iteration-count: infinite;
             animation-direction: alternate;
             }
-        @keyframes example{
+        .backCloud{
+            fill:#B3B3B4;
+            position: relative;
+            animation-name: backCloudAnimation;
+            animation-delay: 2s;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            }
+        @keyframes backCloudAnimation{
             0%   {}
-            100%  {transform: translateY(50px);}
+            100%  {transform: translatex(45px);}
+        }
+        @keyframes frontCloudAnimation{
+            0% {}
+            100% {transform: translateX(-45px);}
+        }
+        
+
+        .fog, .fog2, .fog3{
+            fill:#FFFFFF;
+            stroke:#000000;
+            stroke-miterlimit:10;
+            position: relative;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        .fog{
+            animation-name: fog;
+        }
+        .fog2{
+            animation-name: fog2;
+        }
+        .fog3{
+            animation-name: fog3;
+        }
+        
+        @keyframes fog{
+            0% { transform: translateX(-45px) }
+            100% { transform: translateX(45px) }
         }
     </style>
 </head>
 <body>
     <div>
-            <?xml version="1.0" encoding="utf-8"?>
-            <!-- Generator: Adobe Illustrator 23.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                 viewBox="0 0 170.08 198.43" style="enable-background:new 0 0 170.08 198.43;" xml:space="preserve">
-            <g id="Thunder">
-                <polygon class="Thunder" points="130.35,86.65 128.75,86.14 123.69,86.14 118.05,86.14 123.41,65.63 109.87,62.09 103.58,86.14 
-                    103.1,86.14 99.69,94.48 99.69,97.14 111.72,97.14 99.61,135.32 	"/>
-                <polygon class="Thunder" points="74.89,86.65 73.29,86.14 68.23,86.14 62.59,86.14 67.95,65.63 54.41,62.09 48.12,86.14 47.65,86.14 
-                    44.23,94.48 44.23,97.14 56.26,97.14 44.16,135.32 	"/>
-            </g>
-            <path id="Cloud" class="ThunderCloud" d="M129.21,54.15c0-0.19,0.01-0.39,0.01-0.58c0-22.92-18.58-41.5-41.5-41.5
-                c-22.92,0-41.5,18.58-41.5,41.5c0,0.17,0.01,0.34,0.01,0.51c-0.17,0-0.34-0.01-0.51-0.01c-22.92,0-41.5,18.58-41.5,41.5
-                c0,21.05,15.68,38.43,36,41.13v0.17h1.44c1.33,0.13,2.69,0.2,4.06,0.2s2.72-0.07,4.06-0.2h72.44v-0.05c1.48,0.16,2.98,0.25,4.5,0.25
-                c22.92,0,41.5-18.58,41.5-41.5C168.22,73.49,150.97,55.44,129.21,54.15z"/>
-            </svg>
+        <!--<?xml version="1.0" encoding="utf-8"?>
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 226.77 198.43" style="enable-background:new 0 0 226.77 198.43;" xml:space="preserve">
+        <g>
+            <path class="frontCloud" d="M171.21,44.25c0-0.19,0.01-0.39,0.01-0.58c0-22.92-18.58-41.5-41.5-41.5s-41.5,18.58-41.5,41.5
+                c0,0.17,0.01,0.34,0.01,0.51c-0.17,0-0.34-0.01-0.51-0.01c-22.92,0-41.5,18.58-41.5,41.5c0,21.05,15.68,38.43,36,41.13v0.17h1.44
+                c1.33,0.13,2.69,0.2,4.06,0.2s2.72-0.07,4.06-0.2h72.44v-0.05c1.48,0.16,2.98,0.25,4.5,0.25c22.92,0,41.5-18.58,41.5-41.5
+                C210.22,63.58,192.97,45.53,171.21,44.25z"/>
+            <path class="backCloud" d="M141.26,101.05c0-0.19,0.01-0.39,0.01-0.58c0-22.92-18.58-41.5-41.5-41.5s-41.5,18.58-41.5,41.5
+                c0,0.17,0.01,0.34,0.01,0.51c-0.17,0-0.34-0.01-0.51-0.01c-22.92,0-41.5,18.58-41.5,41.5c0,21.05,15.68,38.43,36,41.13v0.17h1.44
+                c1.33,0.13,2.69,0.2,4.06,0.2s2.72-0.07,4.06-0.2h72.44v-0.05c1.48,0.16,2.98,0.25,4.5,0.25c22.92,0,41.5-18.58,41.5-41.5
+                C180.28,120.38,163.02,102.33,141.26,101.05z"/>
+        </g>
+        </svg>-->
+        
+
+        <?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 198.43 226.77" style="enable-background:new 0 0 198.43 226.77;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#898480;}
+</style>
+<g>
+	<path class="st0" d="M142.2,69.94c0-0.19,0.01-0.39,0.01-0.58c0-22.92-18.58-41.5-41.5-41.5s-41.5,18.58-41.5,41.5
+		c0,0.17,0.01,0.34,0.01,0.51c-0.17,0-0.34-0.01-0.51-0.01c-22.92,0-41.5,18.58-41.5,41.5c0,21.05,15.68,38.43,36,41.13v0.17h1.44
+		c1.33,0.13,2.69,0.2,4.06,0.2s2.72-0.07,4.06-0.2h72.44v-0.05c1.48,0.16,2.98,0.25,4.5,0.25c22.92,0,41.5-18.58,41.5-41.5
+		C181.21,89.27,163.96,71.23,142.2,69.94z"/>
+	<g>
+		<path class="fog" d="M156.21,168.8h-114c-2.2,0-4-1.8-4-4l0,0c0-2.2,1.8-4,4-4h114c2.2,0,4,1.8,4,4l0,0
+			C160.21,167,158.41,168.8,156.21,168.8z"/>
+		<path class="fog2" d="M156.21,198.91h-114c-2.2,0-4-1.8-4-4v0c0-2.2,1.8-4,4-4h114c2.2,0,4,1.8,4,4v0
+			C160.21,197.11,158.41,198.91,156.21,198.91z"/>
+		<path class="fog3" d="M156.21,183.86h-114c-2.2,0-4-1.8-4-4v0c0-2.2,1.8-4,4-4h114c2.2,0,4,1.8,4,4v0
+			C160.21,182.06,158.41,183.86,156.21,183.86z"/>
+	</g>
+</g>
+</svg>
+
     </div>
 </body>
 </html>
