@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
     <style>
         /* div{
@@ -34,51 +35,385 @@
             to{background-color: yellow;  top: 200px;}
         } */
         
-	    .ThunderCloud{
-            fill:#B3B3B4; 
-            /* animation-fill-mode: forwards; */
-            }
-        div{
+	    div{
             width: 200px;
-            height: 200px;  
+            height: 250px;
         }
-        .Thunder{
-            fill:#EAAD4C;
-            position: relative;
-            animation-name: example;
-            animation-delay: 2s;
-            animation-duration: 4s;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
-            }
-        @keyframes example{
-            0%   {}
-            100%  {transform: translateY(50px);}
-        }
+        
+        .weatherAnimation{
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;  
+}
+.frontCloud{
+    fill:#79736E;
+    position: relative;
+    animation-name: frontCloudAnimation;
+    animation-timing-function: linear;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    }
+.backCloud{
+    fill:#B3B3B4;
+    position: relative;
+    animation-name: backCloudAnimation;
+    animation-duration: 3.5s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    }
+@keyframes backCloudAnimation{
+    0%   {}
+    100%  {transform: translatex(45px);}
+}
+@keyframes frontCloudAnimation{
+    0% {}
+    100% {transform: translateX(-45px);}
+}
+
+
+.fogCloud{fill:#898480;}
+
+.fog, .fog2, .fog3{
+    fill:#FFFFFF;
+    stroke:#000000;
+    stroke: miterlimit 10;
+    position: relative;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+.fog{
+    animation-name: fog;
+    animation-delay: 2s;
+    transform: translateX(-35px);   
+}
+.fog2{
+    animation-name: fog2;
+}
+.fog3{
+    animation-name: fog3;
+}
+
+@keyframes fog{
+    0% { transform: translateX(-35px) }
+    100% { transform: translateX(35px) }
+}
+@keyframes fog2{
+    0% { transform: translateX(-35px) }
+    100% { transform: translateX(35px) }
+}
+@keyframes fog3{
+    0% { transform: translateX(35px) }
+    100% { transform: translateX(-35px) }
+}
+
+.ThunderCloud{
+    fill:#B3B3B4;
+    /* animation-fill-mode: forwards; */
+}
+
+.Thunder{
+    fill:#EAAD4C;
+    position: relative;
+    animation-name: ThunderStrike;
+    animation-delay: 2s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes ThunderStrike{
+0%   {}
+100%  {transform: translateY(50px);}
+}
+
+
+
+.RainCloud{
+    fill:#B3B3B4;
+}
+
+.Raindrop1, .Raindrop2, .Raindrop3, .Raindrop4, .Raindrop5, .Raindrop6, .Raindrop7, .Raindrop8, .Raindrop9, .Raindrop10{
+    fill:#3D6BB4;
+    position: relative;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.Raindrop1{
+    animation-name: Raindrop1;
+    animation-delay: 0.2s;
+    animation-duration: 1s;
+}
+@keyframes Raindrop1{
+    100% { transform: translateY(90px); }
+}
+
+.Raindrop2{
+    animation-name: Raindrop2;
+    animation-delay: 0.9s;
+    animation-duration: 1s;
+}
+@keyframes Raindrop2{
+    100% { transform: translateY(90px); }
+}
+
+.Raindrop3{
+    animation-name: Raindrop3;
+    animation-delay: 0.5s;
+    animation-duration: 1s;
+}
+@keyframes Raindrop3{
+    100% { transform: translateY(90px); }
+}
+
+.Raindrop4{
+    animation-name: Raindrop4;
+    animation-delay: 0.2s;
+    animation-duration: 1s;
+}
+@keyframes Raindrop4{
+    100% { transform: translateY(90px); }
+}
+
+.Raindrop5{
+    animation-name: Raindrop5;
+    animation-delay: 0.8s;
+    animation-duration: 1s;
+}
+@keyframes Raindrop5{
+    100% { transform: translateY(90px); }
+}
+
+.Raindrop6{
+    animation-name: Raindrop6;
+    animation-delay: 0.6s;
+    animation-duration: 1s;
+}
+@keyframes Raindrop6{
+    100% { transform: translateY(90px); }
+}
+
+.Raindrop7{
+    animation-name: Raindrop7;
+    animation-delay: 0.8s;
+    animation-duration: 1s;
+}
+@keyframes Raindrop7{
+    100% { transform: translateY(90px); }
+}
+
+.Raindrop8{
+    animation-name: Raindrop8;
+    animation-delay: 0.4s;
+    animation-duration: 1s;
+}
+@keyframes Raindrop8{
+    100% { transform: translateY(90px); }
+}
+
+.Raindrop9{
+    animation-name: Raindrop9;
+    animation-delay: 0.1s;
+    animation-duration: 1s;
+}
+@keyframes Raindrop9{
+    100% { transform: translateY(90px); }
+}
+
+.Raindrop10{
+    animation-name: Raindrop10;
+    animation-delay: 0.7s;
+    animation-duration: 1s;
+}
+@keyframes Raindrop10{
+    100% { transform: translateY(90px); }
+}
+
+.SnowCloud{
+    fill:#898480;
+}
+
+.Snowball{
+    fill:#FFFFFF;
+    stroke:#000000;
+    stroke-miterlimit:10;
+    position: relative;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#Snow1{
+    animation-name: Snow1;
+    animation-delay: 1s;
+    animation-duration: 3s;
+}
+#Snow2{
+    animation-name: Snow2;
+    animation-delay: 2.5s;
+    animation-duration: 3s;
+}
+#Snow3{
+    animation-name: Snow3;
+    animation-delay: 0s;
+    animation-duration: 3s;
+}
+#Snow4{
+    animation-name: Snow4;
+    animation-delay: 1s;
+    animation-duration: 3s;
+}
+#Snow5{
+    animation-name: Snow5;
+    animation-delay: 2s;
+    animation-duration: 3s;
+}
+#Snow6{
+    animation-name: Snow6;
+    animation-delay: 1.5s;
+    animation-duration: 3s;
+}
+#Snow7{
+    animation-name: Snow7;
+    animation-delay: 0s;
+    animation-duration: 3s;
+}
+#Snow8{
+    animation-name: Snow8;
+    animation-delay: 2.25s;
+    animation-duration: 3s;
+}
+
+@keyframes Snow1{
+    0% {}
+    100% { transform: translateY(100px); }
+}
+
+@keyframes Snow2{
+    0% {}
+    100% { transform: translateY(100px); }
+}
+
+@keyframes Snow3{
+    0% {}
+    100% { transform: translateY(100px); }
+}
+
+@keyframes Snow4{
+    0% {}
+    100% { transform: translateY(100px); }
+}
+
+@keyframes Snow5{
+    0% {}
+    100% { transform: translateY(100px); }
+}
+
+@keyframes Snow6{
+    0% {}
+    100% { transform: translateY(100px); }
+}
+
+@keyframes Snow7{
+    0% {}
+    100% { transform: translateY(100px); }
+}
+
+@keyframes Snow8{
+    0% {}
+    100% { transform: translateY(100px); }
+}
+
+
+.SunRays{
+    transform: rotate();
+}
+
+.SunRay{Fill: #F0EB51;}
+
+.Sun{
+    fill:#F0EB51;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: Sun;
+    animation-duration: 3s;
+    animation-direction: alternate;
+}
+
+@keyframes Sun{
+   100%{ fill: #ebe314;
+   r: 25px; }
+}
+
+.DivRotate{
+    animation-name: SunRay1;
+    animation-duration: 8.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+}
+
+@keyframes SunRay1{
+    100% { transform: rotate(360deg);}
+
+}
+
     </style>
 </head>
 <body>
-    <div>
-            <?xml version="1.0" encoding="utf-8"?>
-            <!-- Generator: Adobe Illustrator 23.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                 viewBox="0 0 170.08 198.43" style="enable-background:new 0 0 170.08 198.43;" xml:space="preserve">
-            <g id="Thunder">
-                <polygon class="Thunder" points="130.35,86.65 128.75,86.14 123.69,86.14 118.05,86.14 123.41,65.63 109.87,62.09 103.58,86.14 
-                    103.1,86.14 99.69,94.48 99.69,97.14 111.72,97.14 99.61,135.32 	"/>
-                <polygon class="Thunder" points="74.89,86.65 73.29,86.14 68.23,86.14 62.59,86.14 67.95,65.63 54.41,62.09 48.12,86.14 47.65,86.14 
-                    44.23,94.48 44.23,97.14 56.26,97.14 44.16,135.32 	"/>
-            </g>
-            <path id="Cloud" class="ThunderCloud" d="M129.21,54.15c0-0.19,0.01-0.39,0.01-0.58c0-22.92-18.58-41.5-41.5-41.5
-                c-22.92,0-41.5,18.58-41.5,41.5c0,0.17,0.01,0.34,0.01,0.51c-0.17,0-0.34-0.01-0.51-0.01c-22.92,0-41.5,18.58-41.5,41.5
-                c0,21.05,15.68,38.43,36,41.13v0.17h1.44c1.33,0.13,2.69,0.2,4.06,0.2s2.72-0.07,4.06-0.2h72.44v-0.05c1.48,0.16,2.98,0.25,4.5,0.25
-                c22.92,0,41.5-18.58,41.5-41.5C168.22,73.49,150.97,55.44,129.21,54.15z"/>
-            </svg>
-    </div>
+
+<div>
+    <?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 170.08 198.43" style="enable-background:new 0 0 170.08 198.43;" xml:space="preserve"><g id="Thunder"><polygon class="Thunder" points="130.35,86.65 128.75,86.14 123.69,86.14 118.05,86.14 123.41,65.63 109.87,62.09 103.58,86.14 103.1,86.14 99.69,94.48 99.69,97.14 111.72,97.14 99.61,135.32 	"/><polygon class="Thunder" points="74.89,86.65 73.29,86.14 68.23,86.14 62.59,86.14 67.95,65.63 54.41,62.09 48.12,86.14 47.65,86.14 44.23,94.48 44.23,97.14 56.26,97.14 44.16,135.32 	"/></g><path id="Cloud" class="ThunderCloud" d="M129.21,54.15c0-0.19,0.01-0.39,0.01-0.58c0-22.92-18.58-41.5-41.5-41.5c-22.92,0-41.5,18.58-41.5,41.5c0,0.17,0.01,0.34,0.01,0.51c-0.17,0-0.34-0.01-0.51-0.01c-22.92,0-41.5,18.58-41.5,41.5c0,21.05,15.68,38.43,36,41.13v0.17h1.44c1.33,0.13,2.69,0.2,4.06,0.2s2.72-0.07,4.06-0.2h72.44v-0.05c1.48,0.16,2.98,0.25,4.5,0.25c22.92,0,41.5-18.58,41.5-41.5C168.22,73.49,150.97,55.44,129.21,54.15z"/></svg> 
+</div>
+
+<div>
+    <?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 198.43 226.77" style="enable-background:new 0 0 198.43 226.77;" xml:space="preserve"><path class="Raindrop1" d="M82.18,91.32l0.01-0.2c0,0-15.53,16.56-1.44,20.42l-0.01,0.15C94.87,109.88,83.12,92.66,82.18,91.32z"/><path class="Raindrop2" d="M69.77,91.32l0.01-0.2c0,0-15.53,16.56-1.44,20.42l-0.01,0.15C82.47,109.88,70.71,92.66,69.77,91.32z"/><path class="Raindrop3" d="M57.37,91.32l0.01-0.2c0,0-15.53,16.56-1.44,20.42l-0.01,0.15C70.06,109.88,58.31,92.66,57.37,91.32z"/><path class="Raindrop4" d="M44.96,91.32l0.01-0.2c0,0-15.53,16.56-1.44,20.42l-0.01,0.15C57.66,109.88,45.9,92.66,44.96,91.32z"/><path class="Raindrop5" d="M94.58,91.32l0.01-0.2c0,0-15.53,16.56-1.44,20.42l-0.01,0.15C107.28,109.88,95.52,92.66,94.58,91.32z"/><path class="Raindrop6" d="M156.61,91.32l0.01-0.2c0,0-15.53,16.56-1.44,20.42l-0.01,0.15C169.3,109.88,157.55,92.66,156.61,91.32z"/><path class="Raindrop7" d="M144.2,91.32l0.01-0.2c0,0-15.53,16.56-1.44,20.42l-0.01,0.15C156.9,109.88,145.14,92.66,144.2,91.32z"/><path class="Raindrop8" d="M131.8,91.32l0.01-0.2c0,0-15.53,16.56-1.44,20.42l-0.01,0.15C144.49,109.88,132.74,92.66,131.8,91.32z"/><path class="Raindrop9" d="M106.99,91.32l0.01-0.2c0,0-15.53,16.56-1.44,20.42l-0.01,0.15C119.68,109.88,107.93,92.66,106.99,91.32z"/><path class="Raindrop10" d="M119.39,91.32l0.01-0.2c0,0-15.53,16.56-1.44,20.42l-0.01,0.15C132.09,109.88,120.33,92.66,119.39,91.32z"/><path class="RainCloud" d="M141.06,47.71c0-0.19,0.01-0.39,0.01-0.58c0-22.92-18.58-41.5-41.5-41.5s-41.5,18.58-41.5,41.5c0,0.17,0.01,0.34,0.01,0.51c-0.17,0-0.34-0.01-0.51-0.01c-22.92,0-41.5,18.58-41.5,41.5c0,21.05,15.68,38.43,36,41.13v0.17h1.44c1.33,0.13,2.69,0.2,4.06,0.2s2.72-0.07,4.06-0.2h72.44v-0.05c1.48,0.16,2.98,0.25,4.5,0.25c22.92,0,41.5-18.58,41.5-41.5C180.07,67.04,162.82,48.99,141.06,47.71z"/></svg>
+</div>   
+
+<div>
+    <?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 198.43 226.77" style="enable-background:new 0 0 198.43 226.77;" xml:space="preserve"><circle id="Snow2" class="Snowball" cx="58.73" cy="82.73" r="10.38"/><circle id="Snow8" class="Snowball" cx="137.1" cy="82.73" r="10.38"/><circle id="Snow4" class="Snowball" cx="87.54" cy="82.73" r="10.38"/><circle id="Snow6" class="Snowball" cx="105.98" cy="82.73" r="10.38"/><circle id="Snow7" class="Snowball" cx="122.73" cy="82.73" r="10.38"/><circle id="Snow1" class="Snowball" cx="53.73" cy="82.73" r="10.38"/><circle id="Snow5" class="Snowball" cx="95.92" cy="82.85" r="10.38"/><circle id="Snow3" class="Snowball" cx="75.17" cy="82.85" r="10.38"/><path class="SnowCloud" d="M136.95,47.5c0-0.19,0.01-0.39,0.01-0.58c0-22.92-18.58-41.5-41.5-41.5S53.97,24,53.97,46.92c0,0.17,0.01,0.34,0.01,0.51c-0.17,0-0.34-0.01-0.51-0.01c-22.92,0-41.5,18.58-41.5,41.5c0,21.05,15.68,38.43,36,41.13v0.17h1.44c1.33,0.13,2.69,0.2,4.06,0.2s2.72-0.07,4.06-0.2h72.44v-0.05c1.48,0.16,2.98,0.25,4.5,0.25c22.92,0,41.5-18.58,41.5-41.5C175.97,66.84,158.71,48.79,136.95,47.5z"/></svg>
+</div>
+
+<div>
+    <?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 198.43 226.77" style="enable-background:new 0 0 198.43 226.77;" xml:space="preserve"><path class="fogCloud" d="M142.2,69.94c0-0.19,0.01-0.39,0.01-0.58c0-22.92-18.58-41.5-41.5-41.5s-41.5,18.58-41.5,41.5c0,0.17,0.01,0.34,0.01,0.51c-0.17,0-0.34-0.01-0.51-0.01c-22.92,0-41.5,18.58-41.5,41.5c0,21.05,15.68,38.43,36,41.13v0.17h1.44c1.33,0.13,2.69,0.2,4.06,0.2s2.72-0.07,4.06-0.2h72.44v-0.05c1.48,0.16,2.98,0.25,4.5,0.25c22.92,0,41.5-18.58,41.5-41.5C181.21,89.27,163.96,71.23,142.2,69.94z"/><g><path class="fog" d="M156.21,168.8h-114c-2.2,0-4-1.8-4-4l0,0c0-2.2,1.8-4,4-4h114c2.2,0,4,1.8,4,4l0,0C160.21,167,158.41,168.8,156.21,168.8z"/><path class="fog2" d="M156.21,198.91h-114c-2.2,0-4-1.8-4-4v0c0-2.2,1.8-4,4-4h114c2.2,0,4,1.8,4,4v0C160.21,197.11,158.41,198.91,156.21,198.91z"/><path class="fog3" d="M156.21,183.86h-114c-2.2,0-4-1.8-4-4v0c0-2.2,1.8-4,4-4h114c2.2,0,4,1.8,4,4v0C160.21,182.06,158.41,183.86,156.21,183.86z"/></g></g></svg>
+</div>
+
+<div>
+    <?xml version="1.0" encoding="utf-8"?>   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 226.77 198.43" style="enable-background:new 0 0 226.77 198.43;" xml:space="preserve"><g><path class="frontCloud" d="M171.21,44.25c0-0.19,0.01-0.39,0.01-0.58c0-22.92-18.58-41.5-41.5-41.5s-41.5,18.58-41.5,41.5c0,0.17,0.01,0.34,0.01,0.51c-0.17,0-0.34-0.01-0.51-0.01c-22.92,0-41.5,18.58-41.5,41.5c0,21.05,15.68,38.43,36,41.13v0.17h1.44c1.33,0.13,2.69,0.2,4.06,0.2s2.72-0.07,4.06-0.2h72.44v-0.05c1.48,0.16,2.98,0.25,4.5,0.25c22.92,0,41.5-18.58,41.5-41.5C210.22,63.58,192.97,45.53,171.21,44.25z"/><path class="backCloud" d="M141.26,101.05c0-0.19,0.01-0.39,0.01-0.58c0-22.92-18.58-41.5-41.5-41.5s-41.5,18.58-41.5,41.5c0,0.17,0.01,0.34,0.01,0.51c-0.17,0-0.34-0.01-0.51-0.01c-22.92,0-41.5,18.58-41.5,41.5c0,21.05,15.68,38.43,36,41.13v0.17h1.44c1.33,0.13,2.69,0.2,4.06,0.2s2.72-0.07,4.06-0.2h72.44v-0.05c1.48,0.16,2.98,0.25,4.5,0.25c22.92,0,41.5-18.58,41.5-41.5C180.28,120.38,163.02,102.33,141.26,101.05z"/></g></svg>        
+</div>
+
+<div class="DivRotate">
+        <?xml version="1.0" encoding="utf-8"?>
+        <!-- Generator: Adobe Illustrator 23.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             viewBox="0 0 127.56 127.56" style="enable-background:new 0 0 127.56 127.56;" xml:space="preserve">
+        <g class="SunRays">
+            
+                <rect x="93.36" y="79.4" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -38.4229 94.6813)" class="SunRay" width="3.43" height="28.64"/>
+            
+               <rect x="79.26" y="32.51" transform="matrix(0.7071 -0.7071 0.7071 0.7071 3.1634 76.1763)" class="SunRay" width="28.55" height="3.52"/>
+            
+                <rect x="31.69" y="19.85" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -14.3167 33.6553)" class="SunRay" width="3.56" height="28.51"/>
+            
+                <rect x="19.62" y="92.15" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -56.4484 51.4843)" class="SunRay" width="28.61" height="3.46"/>
+            <rect x="91.78" y="62.51" class="SunRay" width="28.64" height="3.43"/>
+            <rect x="7.09" y="62.51" class="SunRay" width="28.64" height="3.43"/>
+            <rect x="61.87" y="7.56" class="SunRay" width="3.43" height="28.64"/>
+            <rect x="61.87" y="92.25" class="SunRay" width="3.43" height="28.64"/>
+        </g>
+        <circle class="Sun" cx="63.58" cy="64.22" r="19.84"/>
+        </svg>
+        
+        
+</div>
+
+<p style="margin-top: 200px;"></p>
+
 </body>
 </html>
-
-
-
-	
-
