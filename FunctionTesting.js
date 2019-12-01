@@ -170,20 +170,20 @@ information.setAttribute('id', 'information');
 const cityNameOutput = document.createElement('div');
 cityNameOutput.setAttribute('id', 'CityName')
 
-//Create Temp for the city
+//Create output for Temp and add it's Attrivutes
 tempOutput = document.createElement('div');
 tempOutput.setAttribute('id', 'temp');
 
-//Create feels like
+//Create output for feels like and give it an id
 const appTempOutput = document.createElement('div');
 appTempOutput.setAttribute('id', 'appTemp')
 
-//Weather description
+//Creating output for the weather description and giving it an id
 const weatherDescriptionOutput = document.createElement('div');
 weatherDescriptionOutput.setAttribute('id', 'weatherDescription')
 
 
-//Weather Animaiton
+//Create output for the Animated svg and giving it an ID
 const weatherAnimationOutput = document.createElement('div');
 weatherAnimationOutput.setAttribute('id', 'weatherAnimation')
 
